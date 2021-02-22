@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "schema bootstrap/material-ui",
+    "title": "Schematics for Bootstrap or Angular frameworks",
+    "type": "object",
+    "properties": {
+        "framework": {
+            "description": "Pick a Framework",
+            "type": "string"
+        },
+        "componentLibrary": {
+            "description": "Component Library",
+            "type": "string",
+            "enum": [
+                "bootstrap",
+                "@angular/material"
+            ],
+            "x-prompt": {
+                "message": "Ingresa el framework a utilizar:",
+                "type": "list",
+                "items": [
+                    {"value": "bootstrap", "label": "Bootstrap"},
+                    {"value": "@angular/material", "label": "Angular Material"}
+                ]
+            }
+        }
+    }
+}
